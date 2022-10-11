@@ -35,11 +35,3 @@ for (let smoothLink of smoothLinks) {
         });
     });
 };
-
-//const sloganReload = document.querySelector("intro_slogan");
-// sloganReload.onclick = function () {
-// 	location.reload();
-// }
-// sloganReload.addEventListener("click", , function () {
-// 	location.reload()
-// });
