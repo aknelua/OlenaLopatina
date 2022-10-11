@@ -1,0 +1,291 @@
+
+/*обнулення*/
+*{
+	padding: 0;
+	margin: 0;
+	border: 0;
+}
+*,*:before,*:after{
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+:focus,:active{outline: none;}
+a:focus,a:active{outline: none;}
+
+nav,footer,header,aside{display: block;}
+
+html,body{
+	height: 100%;
+	width: 100%;
+	font-size: 100%;
+	line-height: 1;
+	font-size: 14px;
+	-ms-text-size-adjust: 100%;
+	-moz-text-size-adjust: 100%;
+	-webkit-text-size-adjust: 100%;
+}
+input,button,textarea{font-family:inherit;}
+
+input::-ms-clear{display: none;}
+button{cursor: pointer;}
+button::-moz-focus-inner {padding:0;border:0;}
+a, a:visited{text-decoration: none;}
+a:hover{text-decoration: none;}
+ul li{list-style: none;}
+img{vertical-align: top;}
+
+h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight: 400;}
+/*--------------------*/
+.header{
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	text-align: center;
+	align-items: center;
+	padding: 30px 50px;
+	min-width: 500px; 
+	background-color: rgba(255, 255, 255, 0.74);
+	position: sticky;
+	top: 0px;
+	z-index: 6;
+}
+.logo{
+	display: flex;
+	flex-direction: column;
+	color: black;
+}
+.logo_top {
+	font-size: 55px;
+	font-family: 'Poiret One', cursive;
+	padding: 10px;
+}
+.logo_bottom{
+	letter-spacing: 2px;
+	position: relative;
+}
+.logo_bottom::before{
+	content: "";
+	position: absolute;
+	width: 100px;
+	height: 1px;
+	background-color: black;
+	top: -4px;
+	left: 37%;
+	transition: all 1s ease;
+}
+.logo:hover .logo_bottom::before{
+	transform: scale(2.5, 1);
+}
+.menu {
+}
+.social{
+	display: flex;
+	flex-wrap: nowrap;
+	padding-top: 10px;
+}
+.social>:not(:last-child){
+	padding-right: 10px;
+	}
+.change-lang{
+	border: 1px solid black;
+	margin-right: 20px;
+}
+.social_img{
+	height: 24px;
+	transition: all 1s ease;
+}
+.social_img:hover{
+	transform: rotate(360deg);
+}
+/*______main_______________________________*/
+.intro_background_bw_img{
+	width: 100%;
+	min-width: 500px;
+	height: 500px;
+}
+ .intro_background_color {
+	background-color: rgb(228, 224, 228);
+	height: 530px;
+	max-width: 900px;
+	min-width: 500px;
+	margin: -450px auto 0px ;
+	position: relative;
+	z-index: 2;
+}
+.intro_container{
+	padding: 50px; 
+	margin: 0 auto;
+	max-width: 700px;
+	height: 500px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-wrap: wrap;
+}
+
+.intro_foto{
+	align-self: flex-end;
+}
+ .intro_foto_img {
+	opacity: 0.7;
+	max-height: 300px;
+}
+.intro_slogan {
+	font-size: 40px;
+	background-color: white;
+	color: rgb(218, 193, 218);
+	font-family: 'Poiret One', cursive;
+	align-self: flex-start;	
+	padding: 20px;
+	margin: 10px 10px -20px -20px;
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+}
+.intro_slogan_span2{
+	font-family: 'Dancing Script', cursive;
+	transition: all 0.5s ease;
+	animation-duration: 3s;
+}
+.intro_slogan_span2{
+	font-family: 'Dancing Script', cursive;
+	transition: all 0.5s ease;
+	animation-duration: 8s;
+}
+.buttons{
+	display: flex;
+	flex-direction: column;
+	flex: 1 1 auto;
+	text-align: center;
+	margin-top: 20px;
+
+	}
+.buttons>:not(:last-child){
+	margin-bottom: 10px;
+}
+.button_menu{
+	padding: 5px 10px;
+	background-color: rgb(170, 146, 170);
+	color:  rgb(214, 202, 214);
+	font-size: 30px;
+	border-radius: 3px;
+	transition: 0.3s;
+}
+.button_menu:hover{
+	transform:  scale(1.1, 1.05);
+	text-shadow: 1px 1px 1px white
+}
+@media (min-width:684px){
+	.header{
+		justify-content: space-between;
+	}
+	.buttons{
+		margin-top: 200px;
+		margin-left: -40px;
+		}
+}
+@media (min-width:600px){
+	.intro_container{
+		padding: 50px;
+		}
+}
+@media (max-width:546px){
+.intro_slogan{
+	margin-top:-30px;
+}
+}
+/*_________all Blocks___________________________________________*/
+.section{
+	margin: 0 -30px;
+	padding: 15px 30px;
+	min-width: 500px;
+	display: flex;
+	flex-wrap: wrap;
+}
+.content{
+}
+.title{	
+	text-align: center;
+	font-size: 40px;
+	color: rgb(184, 159, 184);
+	font-family: 'Poiret One', cursive;
+}
+.text{
+	text-align: justify; 
+	margin-top: 20px;
+	font-size: 16px;
+	color: rgb(141, 128, 141);
+	font-family: 'Open Sans', sans-serif;
+	font-weight: 400;
+	line-height: 150%;
+	text-indent: 1.5em;
+	white-space: normal;
+}
+@media (min-width:750px) {
+	.text{
+		font-size: 20px;
+	}
+}
+/*_________ABOUT________________________________________________*/
+
+.about_section {
+	max-width: 1100px;
+	margin: -80px auto 0;
+	padding: 110px 15px 3%;
+	background-color: rgba(243,244,246,255);
+	background-image: url("img/about/1.jpg");
+	background-repeat: no-repeat;
+	background-position: 0 80px;
+	Background-size: auto 80%;;
+}
+.about_content{
+	padding-left: 30%;
+	max-width: 900px;
+}
+@media (max-width:560px) {
+	.about_content{
+		background-color: rgba(255, 255, 255, 0.562);
+		margin: -80px auto 0;
+		padding: 100px 30px 3%;
+	}
+}
+@media (min-width:890px) {
+	
+}
+/*_________portfolio________________________________________________*/
+.portfolio_section {
+	max-width: 1300px;
+	margin: 0px auto 0;
+	padding-top: 30px;
+	background-color: rgba(247,247,247,255);
+
+}
+@media (min-width:870px) {
+	.portfolio_section {
+	background-image: url("img/portfolio/portfolio1.jpg");
+	background-repeat: no-repeat;
+	background-position: 100% 0;
+	Background-size: auto 100%;;
+	}
+}
+.portfolio_content{
+}
+.portfolio_img{
+	max-height: 100px;
+	opacity: 0.7;
+}
+.portfolio_link{
+	display: flex;
+	justify-content: start;
+	align-items: center;
+}
+.portfolio_link:hover{
+	text-decoration: underline;
+}
+.portfolio_link:hover .portfolio_img{
+	opacity: 1;
+}
