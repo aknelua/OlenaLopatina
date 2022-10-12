@@ -157,12 +157,9 @@ h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight: 400;}
 	position: relative;
 	display: flex;
 	flex-direction: column;
-	justify-content: center;
-	align-items: center;
 	text-align: center;
 }
-.intro_slogan_span2{
-	font-family: 'Dancing Script', cursive;
+.intro_slogan_span1{
 	transition: all 0.5s ease;
 	animation-duration: 3s;
 }
@@ -176,7 +173,7 @@ h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight: 400;}
 	flex-direction: column;
 	flex: 1 1 auto;
 	text-align: center;
-	margin-top: 20px;
+	margin-top: 30px;
 
 	}
 .buttons>:not(:last-child){
@@ -209,8 +206,15 @@ h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight: 400;}
 		}
 }
 @media (max-width:546px){
+	/* .intro_container{flex-direction: column;} */
 .intro_slogan{
 	margin-top:-30px;
+	font-size: 30px;
+	justify-self: start;
+	align-self: flex-start;
+}
+.button_menu{
+	font-size: 20px;
 }
 }
 /*_________all Blocks___________________________________________*/
