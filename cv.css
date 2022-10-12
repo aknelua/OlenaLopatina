@@ -43,8 +43,8 @@ h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight: 400;}
 	justify-content: center;
 	text-align: center;
 	align-items: center;
-	padding: 30px 50px;
-	min-width: 500px; 
+	padding: 15px 15px;
+	min-width: 300px; 
 	background-color: rgba(255, 255, 255, 0.74);
 	position: sticky;
 	top: 0px;
@@ -58,24 +58,25 @@ h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight: 400;}
 .logo_top {
 	font-size: 55px;
 	font-family: 'Poiret One', cursive;
-	padding: 10px;
+	padding: 0 10px 10px;
+	position: relative;
 }
 .logo_bottom{
 	letter-spacing: 2px;
-	position: relative;
+
 }
-.logo_bottom::before{
+.logo_top::after{
 	content: "";
 	position: absolute;
-	width: 100px;
+	width: 15%;
 	height: 1px;
 	background-color: black;
-	top: -4px;
-	left: 37%;
+	top: 61px;
+	left: 42%;
 	transition: all 1s ease;
 }
-.logo:hover .logo_bottom::before{
-	transform: scale(2.5, 1);
+.logo:hover .logo_top::after{
+	transform: scale(4, 1.01);
 }
 .menu {
 }
@@ -98,17 +99,31 @@ h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight: 400;}
 .social_img:hover{
 	transform: rotate(360deg);
 }
+@media (max-width:700px) {
+	.header{
+		padding: 15px 15px;
+	}
+	.logo_top {
+		font-size: 35px;
+	}
+	.logo_bottom{
+		font-size: 10px;
+	}
+	.logo_top::after{
+		top: 40px;
+	}
+}
 /*______main_______________________________*/
 .intro_background_bw_img{
 	width: 100%;
-	min-width: 500px;
+	min-width: 300px; 
 	height: 500px;
 }
  .intro_background_color {
 	background-color: rgb(228, 224, 228);
 	height: 530px;
 	max-width: 900px;
-	min-width: 500px;
+	min-width: 300px; 
 	margin: -450px auto 0px ;
 	position: relative;
 	z-index: 2;
@@ -202,7 +217,7 @@ h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight: 400;}
 .section{
 	margin: 0 -30px;
 	padding: 15px 30px;
-	min-width: 500px;
+	min-width: 300px; 
 	display: flex;
 	flex-wrap: wrap;
 }
@@ -259,7 +274,7 @@ h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight: 400;}
 /*_________portfolio________________________________________________*/
 .portfolio_section {
 	max-width: 1300px;
-	margin: 0px auto 0;
+	margin: 0 auto;
 	padding-top: 30px;
 	background-color: rgba(247,247,247,255);
 
@@ -272,16 +287,29 @@ h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight: 400;}
 	Background-size: auto 100%;;
 	}
 }
-.portfolio_content{
-}
+
 .portfolio_img{
 	max-height: 100px;
 	opacity: 0.7;
 }
+
 .portfolio_link{
 	display: flex;
+	flex-wrap: wrap;
 	justify-content: start;
 	align-items: center;
+}
+@media (max-width:480px) {
+	.portfolio_img{
+		max-height: 50px;
+		justify-self: center;
+	}
+	.portfolio_link{
+		flex-direction: column;
+	}
+	.portfolio_section {
+		justify-content: center;
+	}
 }
 .portfolio_link:hover{
 	text-decoration: underline;
