@@ -114,6 +114,9 @@ h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight: 400;}
 	}
 }
 /*______main_______________________________*/
+.bold{
+	font-weight: bold;
+}
 .intro_background_bw_img{
 	width: 100%;
 	min-width: 300px; 
@@ -200,18 +203,15 @@ h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight: 400;}
 		margin-left: -40px;
 		}
 }
-@media (min-width:600px){
+/* @media (min-width:600px){
 	.intro_container{
 		padding: 50px;
 		}
-}
+} */
 @media (max-width:546px){
-	/* .intro_container{flex-direction: column;} */
 .intro_slogan{
 	margin-top:-30px;
 	font-size: 30px;
-	justify-self: start;
-	align-self: flex-start;
 }
 .button_menu{
 	font-size: 20px;
